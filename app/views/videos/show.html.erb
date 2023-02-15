@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tilte:</strong>
+  <%= @video.tilte %>
+</p>
+
+<div style="width:800px; height:1600px">
+<%= image_tag(@video.thumbnail, style:'width:100%; height:auto') %>
+</div>
+
+<div style="width:800px; height:800px">
+<%= video_tag(url_for(@video.clip), style:'width:100%; height:auto', controls: '') %>
+</div>
+
+<p>
+  <strong>Description:</strong>
+  <%= @video.description %>
+</p>
+
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Back', videos_path %>
